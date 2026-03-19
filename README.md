@@ -1,0 +1,66 @@
+# (C# 코딩) 에코 메신저
+## 개요
+- C# 프로그래밍 학습
+- 소개: 사용자로부터 키보드 입력을 받아서 처리하는 메신저 프로그램 입니다
+- 사용한 플랫폼:
+- C#, .NET Windows Forms, Visual Studio, GitHub
+- 사용한 컨트롤:
+- Label, TextBox, ListBox, Button, Delete
+- 사용한 기술과 구현한 기능:
+- Visual Studio를 이용하여 UI/UX 디자인
+- Trim() 메서드로 불필요한 공백을 제거하고, string.IsNullOrWhiteSpace()를 통해 빈 메시지가 전송되지 않도록 예외 처리를 구현
+- DateTime.Now를 활용하여 메시지가 전송된 정확한 시점을 [yyyy-MM-dd HH:mm:ss] 형식의 문자열로 변환하여 기록
+- 사용자의 클릭(Click), 키 입력(KeyDown), 더블 클릭(DoubleClick) 등 다양한 상호작용에 반응하는 이벤트 핸들러를 구현하여 프로그램의 동적인 동작을 제어
+
+## 실행 화면 (과제1)
+- 과제1 코드의 실행 스크린샷
+<img width="1528" height="892" alt="new_s1" src="https://github.com/user-attachments/assets/e27c30fc-3960-4a68-a6cf-df7e52762864" />
+
+- 과제 내용
+- Label(표시), TextBox(입력), Button(전송), ListBox(대화창)를 적절히 배치합니다.
+- 전송 버튼 클릭 시 TextBox의 텍스트를 ListBox의 항목(Items)으로 추가합니다.
+- 추가 직후 TextBox의 내용을 비워(Clear) 다음 입력을 준비합니다.
+- 
+구현 내용과 기능 설명
+- UI 설계: Windows Forms 도구 상자를 이용하여 사용자 인터페이스를 구성했습니다.
+- 기본 전송: 버튼 클릭 이벤트 핸들러에서 ListBox.Items.Add()를 호출하여 데이터를 전달합니다.
+- 입력창 초기화: 전송 후 TextBox.Clear()와 Focus()를 통해 연속적인 입력이 가능하도록 설계했습니다.
+
+## 실행 화면 (과제2)
+- 과제2 코드의 실행 스크린샷
+<img width="1528" height="892" alt="new_s2" src="https://github.com/user-attachments/assets/e63703d5-6749-4fe7-b364-6d08b602a0ff" />
+
+- 과제 내용
+- 메시지 전송 시 현재 시간을 포함하여 표시합니다.
+- 공백 메시지가 전송되지 않도록 처리하고, 글자 수를 제한합니다.
+- 
+구현 내용과 기능 설명
+- 시간 정보 결합: DateTime.Now를 활용해 [yyyy-MM-dd HH:mm:ss] 포맷으로 메시지 접두어를 생성했습니다.
+- 유효성 검사: string.IsNullOrWhiteSpace()를 사용하여 의미 없는 공백 전송을 방지했습니다.
+- 글자 수 제한: if (text.Length > 50) 조건문을 통해 50자가 넘을 경우 MessageBox 경고창을 띄우고 전송을 중단시켰습니다.
+
+## 실행 화면 (과제3)
+- 과제3 코드의 실행 스크린샷
+<img width="1528" height="892" alt="new_s3" src="https://github.com/user-attachments/assets/e23427f5-959d-49ab-af48-aa3ffe00235a" />
+
+- 과제 내용
+- 버튼 클릭 외에도 엔터(Enter) 키를 눌러 메시지를 전송할 수 있게 합니다.
+- 엔터 입력 시 발생하는 시스템 비프음을 제거합니다.
+- 
+구현 내용과 기능 설명
+- KeyDown 이벤트: TextBox_KeyDown 핸들러에서 e.KeyCode == Keys.Enter 조건을 체크하여 전송 로직을 실행합니다.
+- 비프음 제어: e.SuppressKeyPress = true 설정을 통해 윈도우 기본 엔터 알림음을 차단하여 사용자 경험을 개선했습니다.
+- 포커스 유지: 메시지 전송 후 마우스 조작 없이 바로 다음 타이핑을 할 수 있도록 입력창에 포커스를 유지시킵니다.
+
+## 실행 화면 (과제4)
+- 과제4 코드의 실행 스크린샷
+<img width="1482" height="868" alt="new_s4" src="https://github.com/user-attachments/assets/b41d85d5-2464-4a1e-8848-94ab85cf9b39" />
+
+- 과제 내용
+- 특정 메시지를 선택하여 삭제하거나 전체 대화 내용을 초기화합니다.
+- 현재 대화가 몇 개인지 실시간으로 카운트하여 표시합니다.
+- 
+구현 내용과 기능 설명
+- 개별 항목 삭제: ListBox_DoubleClick 이벤트를 이용해 항목을 더블 클릭하면 삭제 확인 창(MessageBoxButtons.YesNo)을 띄우고 선택된 인덱스의 항목을 제거합니다.
+- 전체 초기화: Items.Clear() 명령어로 리스트박스의 모든 데이터를 한 번에 삭제하는 기능을 구현했습니다.
+- 실시간 카운트: ListBox.Items.Count 속성을 활용하여 메시지가 추가되거나 삭제될 때마다 Label의 텍스트를 "현재 대화: N개" 형식으로 갱신합니다.
