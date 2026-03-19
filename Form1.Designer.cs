@@ -28,54 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Label = new System.Windows.Forms.TextBox();
+            this.ListBox = new System.Windows.Forms.TextBox();
+            this.TextBox = new System.Windows.Forms.TextBox();
+            this.Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Label
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 28.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.ForeColor = System.Drawing.Color.Blue;
-            this.textBox1.Location = new System.Drawing.Point(73, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(658, 100);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Echo Messenger";
+            this.Label.BackColor = System.Drawing.SystemColors.Info;
+            this.Label.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Label.Font = new System.Drawing.Font("맑은 고딕", 28.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Label.ForeColor = System.Drawing.Color.Blue;
+            this.Label.Location = new System.Drawing.Point(73, 39);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(658, 100);
+            this.Label.TabIndex = 0;
+            this.Label.Text = "Echo Messenger";
             // 
-            // textBox2
+            // ListBox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(42, 178);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1265, 451);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.ListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListBox.Location = new System.Drawing.Point(42, 178);
+            this.ListBox.Multiline = true;
+            this.ListBox.Name = "ListBox";
+            this.ListBox.Size = new System.Drawing.Size(1265, 451);
+            this.ListBox.TabIndex = 1;
+            this.ListBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // TextBox
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(64, 699);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(912, 68);
-            this.textBox3.TabIndex = 2;
+            this.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextBox.Location = new System.Drawing.Point(64, 699);
+            this.TextBox.Multiline = true;
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(912, 68);
+            this.TextBox.TabIndex = 2;
             // 
-            // button1
+            // Button
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(1056, 684);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(284, 99);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "전송";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Button.BackColor = System.Drawing.Color.Lime;
+            this.Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Button.Font = new System.Drawing.Font("맑은 고딕", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Button.Location = new System.Drawing.Point(1056, 684);
+            this.Button.Name = "Button";
+            this.Button.Size = new System.Drawing.Size(284, 99);
+            this.Button.TabIndex = 3;
+            this.Button.Text = "전송";
+            this.Button.UseVisualStyleBackColor = false;
+            this.Button.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -83,10 +84,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1416, 828);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Button);
+            this.Controls.Add(this.TextBox);
+            this.Controls.Add(this.ListBox);
+            this.Controls.Add(this.Label);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -97,10 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Label;
+        private System.Windows.Forms.TextBox ListBox;
+        private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Button Button;
     }
 }
 
