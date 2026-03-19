@@ -30,13 +30,14 @@ namespace EchoMessenger
 
         private void Button_Click(object sender, EventArgs e)
         {
-            string typed_msg;
+            string typed_msg = this.TextBox.Text.Trim();
 
             typed_msg = this.TextBox.Text;
 
             if (!string.IsNullOrWhiteSpace(typed_msg))
             {
-                this.ListBox.Items.Add(typed_msg);
+                string result = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {typed_msg}";
+                this.ListBox.Items.Add(result);
 
                 this.TextBox.Clear();
                 this.TextBox.Focus();
@@ -55,11 +56,13 @@ namespace EchoMessenger
                 
                 e.SuppressKeyPress = true;
 
-                string typed_msg = this.TextBox.Text;
+                string typed_msg = this.TextBox.Text.Trim();
 
                 if (!string.IsNullOrWhiteSpace(typed_msg))
                 {
+                    string result = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {typed_msg}";
                     this.ListBox.Items.Add(typed_msg);
+                    this.Label2.Text = $"현재 대화: {this.ListBox.Items.Count}개";
                     this.TextBox.Clear();
                     this.TextBox.Focus();
                 }
