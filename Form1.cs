@@ -30,6 +30,12 @@ namespace EchoMessenger
 
         private void Button_Click(object sender, EventArgs e)
         {
+            if (this.TextBox.Text.Length > 50)
+            {
+                MessageBox.Show("메시지는 50자까지만 입력 가능합니다!", "경고");
+                return; 
+            }
+
             string typed_msg = this.TextBox.Text.Trim();
 
             typed_msg = this.TextBox.Text;
@@ -47,6 +53,21 @@ namespace EchoMessenger
         private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListBox_DoubleClick(object sender, EventArgs e)
+        {
+            int selectedIndex = this.ListBox.SelectedIndex;
+            if (selectedIndex != -1)
+            {
+                DialogResult result = MessageBox.Show("이 메시지를 삭제할까요?", "삭제 확인", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.ListBox.Items.RemoveAt(selectedIndex);
+                    this.Label2.Text = $"현재 대화: {this.ListBox.Items.Count}개";
+                }
+            }
         }
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
@@ -67,6 +88,12 @@ namespace EchoMessenger
                     this.TextBox.Focus();
                 }
             }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            this.ListBox.Items.Clear();
+            MessageBox.Show("대화 기록이 모두 삭제되었습니다.");
         }
     }
 }
