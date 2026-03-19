@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.Label = new System.Windows.Forms.TextBox();
-            this.ListBox = new System.Windows.Forms.TextBox();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.Button = new System.Windows.Forms.Button();
+            this.ListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Label
@@ -45,16 +45,6 @@
             this.Label.Size = new System.Drawing.Size(658, 100);
             this.Label.TabIndex = 0;
             this.Label.Text = "Echo Messenger";
-            // 
-            // ListBox
-            // 
-            this.ListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ListBox.Location = new System.Drawing.Point(42, 178);
-            this.ListBox.Multiline = true;
-            this.ListBox.Name = "ListBox";
-            this.ListBox.Size = new System.Drawing.Size(1265, 451);
-            this.ListBox.TabIndex = 1;
-            this.ListBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // TextBox
             // 
@@ -76,7 +66,17 @@
             this.Button.TabIndex = 3;
             this.Button.Text = "전송";
             this.Button.UseVisualStyleBackColor = false;
-            this.Button.Click += new System.EventHandler(this.button1_Click);
+            this.Button.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // ListBox
+            // 
+            this.ListBox.FormattingEnabled = true;
+            this.ListBox.ItemHeight = 24;
+            this.ListBox.Location = new System.Drawing.Point(64, 168);
+            this.ListBox.Name = "ListBox";
+            this.ListBox.Size = new System.Drawing.Size(1268, 460);
+            this.ListBox.TabIndex = 4;
+            this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -84,9 +84,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1416, 828);
+            this.Controls.Add(this.ListBox);
             this.Controls.Add(this.Button);
             this.Controls.Add(this.TextBox);
-            this.Controls.Add(this.ListBox);
             this.Controls.Add(this.Label);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -99,9 +99,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox Label;
-        private System.Windows.Forms.TextBox ListBox;
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.Button Button;
+        private System.Windows.Forms.ListBox ListBox;
     }
 }
 
