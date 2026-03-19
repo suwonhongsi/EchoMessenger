@@ -2,12 +2,9 @@
 ## 개요
 - C# 프로그래밍 학습
 - 소개: 사용자로부터 키보드 입력을 받아서 처리하는 메신저 프로그램 입니다
-- 사용한 플랫폼:
-- C#, .NET Windows Forms, Visual Studio, GitHub
-- 사용한 컨트롤:
-- Label, TextBox, ListBox, Button, Delete
-- 사용한 기술과 구현한 기능:
-- Visual Studio를 이용하여 UI/UX 디자인
+- 사용한 플랫폼: C#, .NET Windows Forms, Visual Studio, GitHub
+- 사용한 컨트롤: Label, TextBox, ListBox, Button, Delete
+- 사용한 기술과 구현한 기능: Visual Studio를 이용하여 UI/UX 디자인
 - Trim() 메서드로 불필요한 공백을 제거하고, string.IsNullOrWhiteSpace()를 통해 빈 메시지가 전송되지 않도록 예외 처리를 구현
 - DateTime.Now를 활용하여 메시지가 전송된 정확한 시점을 [yyyy-MM-dd HH:mm:ss] 형식의 문자열로 변환하여 기록
 - 사용자의 클릭(Click), 키 입력(KeyDown), 더블 클릭(DoubleClick) 등 다양한 상호작용에 반응하는 이벤트 핸들러를 구현하여 프로그램의 동적인 동작을 제어
