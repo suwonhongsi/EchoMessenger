@@ -33,6 +33,7 @@
             this.Button = new System.Windows.Forms.Button();
             this.ListBox = new System.Windows.Forms.ListBox();
             this.Label2 = new System.Windows.Forms.TextBox();
+            this.Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Label
@@ -79,6 +80,7 @@
             this.ListBox.Size = new System.Drawing.Size(1268, 460);
             this.ListBox.TabIndex = 4;
             this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
+            this.ListBox.DoubleClick += new System.EventHandler(this.ListBox_DoubleClick);
             // 
             // Label2
             // 
@@ -91,12 +93,24 @@
             this.Label2.TabIndex = 5;
             this.Label2.Text = "현재 대화";
             // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("맑은 고딕", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Delete.Location = new System.Drawing.Point(1029, 56);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(343, 83);
+            this.Delete.TabIndex = 6;
+            this.Delete.Text = "대화 기록 삭제";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1416, 828);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.ListBox);
             this.Controls.Add(this.Button);
@@ -117,6 +131,7 @@
         private System.Windows.Forms.Button Button;
         private System.Windows.Forms.ListBox ListBox;
         private System.Windows.Forms.TextBox Label2;
+        private System.Windows.Forms.Button Delete;
     }
 }
 
