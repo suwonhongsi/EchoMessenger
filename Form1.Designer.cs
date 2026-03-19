@@ -32,6 +32,7 @@
             this.TextBox = new System.Windows.Forms.TextBox();
             this.Button = new System.Windows.Forms.Button();
             this.ListBox = new System.Windows.Forms.ListBox();
+            this.Label2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Label
@@ -79,12 +80,24 @@
             this.ListBox.TabIndex = 4;
             this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
+            // Label2
+            // 
+            this.Label2.BackColor = System.Drawing.SystemColors.Info;
+            this.Label2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Label2.Font = new System.Drawing.Font("맑은 고딕", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Label2.Location = new System.Drawing.Point(27, 780);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(313, 36);
+            this.Label2.TabIndex = 5;
+            this.Label2.Text = "현재 대화";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1416, 828);
+            this.Controls.Add(this.Label2);
             this.Controls.Add(this.ListBox);
             this.Controls.Add(this.Button);
             this.Controls.Add(this.TextBox);
@@ -103,6 +116,7 @@
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.Button Button;
         private System.Windows.Forms.ListBox ListBox;
+        private System.Windows.Forms.TextBox Label2;
     }
 }
 
