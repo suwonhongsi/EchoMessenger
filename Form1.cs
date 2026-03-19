@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EchoMessenger
 {
@@ -45,6 +46,24 @@ namespace EchoMessenger
         private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                e.SuppressKeyPress = true;
+
+                string typed_msg = this.TextBox.Text;
+
+                if (!string.IsNullOrWhiteSpace(typed_msg))
+                {
+                    this.ListBox.Items.Add(typed_msg);
+                    this.TextBox.Clear();
+                    this.TextBox.Focus();
+                }
+            }
         }
     }
 }
