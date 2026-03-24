@@ -11,7 +11,7 @@
 
 ## 실행 화면 (과제1)
 - 과제1 코드의 실행 스크린샷
-<img width="1528" height="892" alt="new_s1" src="https://github.com/user-attachments/assets/e27c30fc-3960-4a68-a6cf-df7e52762864" />
+![과제1 실행화면](img/step1.png)
 
 - 과제 내용
 - Label(표시), TextBox(입력), Button(전송), ListBox(대화창)를 적절히 배치합니다.
@@ -25,7 +25,7 @@
 
 ## 실행 화면 (과제2)
 - 과제2 코드의 실행 스크린샷
-<img width="1528" height="892" alt="new_s2" src="https://github.com/user-attachments/assets/e63703d5-6749-4fe7-b364-6d08b602a0ff" />
+![과제2 실행화면](img/step2.png)
 
 - 과제 내용
 - 메시지 전송 시 현재 시간을 포함하여 표시합니다.
@@ -38,7 +38,7 @@
 
 ## 실행 화면 (과제3)
 - 과제3 코드의 실행 스크린샷
-<img width="1528" height="892" alt="new_s3" src="https://github.com/user-attachments/assets/e23427f5-959d-49ab-af48-aa3ffe00235a" />
+![과제3 실행화면](img/step3.png)
 
 - 과제 내용
 - 버튼 클릭 외에도 엔터(Enter) 키를 눌러 메시지를 전송할 수 있게 합니다.
@@ -51,7 +51,7 @@
 
 ## 실행 화면 (과제4)
 - 과제4 코드의 실행 스크린샷
-<img width="1482" height="868" alt="new_s4" src="https://github.com/user-attachments/assets/b41d85d5-2464-4a1e-8848-94ab85cf9b39" />
+![과제4 실행화면](img/step4.png)
 
 - 과제 내용
 - 특정 메시지를 선택하여 삭제하거나 전체 대화 내용을 초기화합니다.
